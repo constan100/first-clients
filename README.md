@@ -100,9 +100,10 @@ Everything is saved in your repo, so the next session starts where you left off:
 ```
 marketing/
 ├── product-profile.md   # what it is, features → benefits, readiness score
-├── icp.md               # ideal customer, personas, where they hang out
+├── icp.md               # ideal customer, where they hang out, amplifiers
+├── targets.md           # first people to contact, with links (keep private)
 ├── competitors.md       # competitor table, complaint themes, sources
-├── strategy.md          # positioning, pricing, channel scores
+├── strategy.md          # goal check, positioning, pricing, channel scores
 ├── plan-30d.md          # week-by-week plan + this week's top 3
 ├── unit-economics.md    # physical products: cost per unit, margin, max CAC
 ├── results.md           # your numbers and learnings, session after session
@@ -151,6 +152,7 @@ quadrantChart
 | 💼 **B2B SaaS** | ⭐⭐⭐ | Precise ideal customer, LinkedIn + email outreach, demos, case studies |
 | 📱 **B2C apps** | ⭐⭐⭐ | Communities, short-form content, app store optimization, referrals, local partners |
 | 🛠️ **Developer tools** | ⭐⭐⭐ | Docs as marketing, GitHub, Show HN, dev communities, free tier |
+| 🌱 **Open source / free tools** | ⭐⭐⭐ | Installs, real usage and feedback (not just stars), README as landing page, sample output, awesome lists |
 | 🔄 **Marketplaces** | ⭐⭐⭐ | Win one side first, go hyper-local or niche |
 | 🧑‍💻 **Freelance services** | ⭐⭐⭐ | Niche, portfolio, referrals, Malt/Upwork, productized offers |
 | 🔌 **Hardware / electronics** | ⭐⭐ | Video demos, tech reviewers, crowdfunding, compliance |
@@ -178,7 +180,7 @@ When there's no code to read, the skill switches to a physical-product mode:
 
 ### Claude Code
 ```bash
-git clone https://github.com/<your-username>/first-clients.git
+git clone https://github.com/constan100/first-clients.git
 cp -r first-clients/first-clients ~/.claude/skills/
 ```
 
@@ -206,13 +208,13 @@ Or call it directly:
 
 ### Two modes
 
-| ⚡ Quick (~15 min) | 🧠 Full (~45 min) |
+| ⚡ Quick | 🧠 Full |
 |---|---|
-| Product summary | Everything in Quick, plus: |
-| Positioning one-liner | Competitor & community research |
-| Top 3 channels | Readiness score + fix list |
-| 5 actions for this week | Pricing / unit economics |
-| | 30-day plan + all assets + tracking |
+| Product scan + blockers | Everything in Quick, plus: |
+| Positioning one-liner | Competitor, community & benchmark research |
+| 2 channels | Real first people to contact, with drafted messages |
+| 5 actions for this week | Goal reality check, pricing / unit economics |
+| | Dated 30-day plan + assets + tracking |
 
 ---
 
