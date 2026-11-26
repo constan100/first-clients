@@ -11,6 +11,8 @@
 ![Digital + Physical](https://img.shields.io/badge/Products-Digital%20%2B%20Physical-10B981?style=for-the-badge)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
+**[See a real run](examples/first-clients-on-itself/PLAN.md)** · **[Install in 1 minute](#️-installation)** · **[Tell me how it went](https://github.com/constan100/first-clients/issues/new?template=i-ran-it.yml)**
+
 </div>
 
 ---
@@ -71,6 +73,19 @@ flowchart LR
 
 ## 📦 What you get at the end
 
+**One page you can follow:** `marketing/PLAN.md`. The bet, your goal, the 3 things to do this week, a checklist for weeks 2–4, and what to do if things don't work. You can read it in 2 minutes.
+
+```markdown
+## Do this week (26 Nov – 2 Dec)
+- [ ] 1. Fix the install line and test a fresh install (1h15)
+- [ ] 2. Publish a sample run and link it at the top of the README (1h30)
+- [ ] 3. Send the 5 drafted messages in assets/outreach.md (1h)
+```
+
+**In the format you want:** ask for it as an **Excel tracker** (tick tasks, log weekly numbers, hours per week), a **PowerPoint** (to show a partner), a **Word** document or **PDF**, **Markdown** or **CSV**. See a real example in [`examples/`](examples/).
+
+Behind that page, everything it's based on:
+
 ```mermaid
 mindmap
   root((First Clients))
@@ -104,18 +119,34 @@ marketing/
 ├── targets.md           # first people to contact, with links (keep private)
 ├── competitors.md       # competitor table, complaint themes, sources
 ├── strategy.md          # goal check, positioning, pricing, channel scores
-├── plan-30d.md          # week-by-week plan + this week's top 3
+├── PLAN.md              # the one-page plan you follow each week
+├── plan-data.json       # the same plan as data (feeds the exports)
+├── exports/             # Excel, PowerPoint, Word, PDF versions
 ├── unit-economics.md    # physical products: cost per unit, margin, max CAC
 ├── results.md           # your numbers and learnings, session after session
-└── assets/
-    ├── landing-copy.md
-    ├── outreach.md
-    ├── launch-posts.md
-    ├── content-calendar.md
-    └── directories.md
+└── assets/              # only what your plan uses: front-door copy, outreach,
+                         # launch posts, listings, emails…
 ```
 
-You also get one **shareable strategy document** with an executive summary.
+Want to share the full reasoning with a partner or cofounder? Ask for the **strategy document** too.
+
+---
+
+## 🧰 More than a plan: 9 modes
+
+Just say what you need. The skill picks the right mode.
+
+| You say… | Mode | What you get |
+|---|---|---|
+| "Help me find my first clients" | 🗺️ **Plan** | The one-page 30-day plan (Quick or Full) |
+| "Here are my numbers this week" | 📈 **Weekly review** | What worked, what to drop, this week's 3 actions, updated tracker |
+| "Find me more people to contact" | 🎯 **Targets** | 10 real people who fit, with links and a drafted message each |
+| "I only have an idea" | 🧪 **Validate** | Interview script, smoke test, and a go / change / stop decision |
+| "I'm launching on Product Hunt / HN" | 🚀 **Launch kit** | Rules check, date, checklist, all the posts, launch-day run sheet |
+| "Fix the blockers" | 🔧 **Fix** | The week-1 fixes applied in your code (diff shown, nothing pushed) |
+| "Here's what users told me" | 💬 **Feedback** | Themes, decisions, customer language, testimonial candidates |
+| "Write my onboarding emails" | ✉️ **Emails** | A welcome → activation → review → win-back sequence |
+| "Export it to Excel / PowerPoint / Word" | 📤 **Export** | The plan in the formats you choose |
 
 ---
 
@@ -158,6 +189,7 @@ quadrantChart
 | 🔌 **Hardware / electronics** | ⭐⭐ | Video demos, tech reviewers, crowdfunding, compliance |
 | 👕 **Consumer goods** | ⭐⭐ | Photos, Instagram/TikTok, influencer seeding, Etsy, local shops |
 | 🎨 **Handmade / artisan** | ⭐⭐ | Etsy, markets, founder story, limited editions |
+| 🎮 **Indie games** | ⭐⭐ | Steam wishlists, demos, store festivals, streamers, short clips |
 
 ### Physical products get their own track
 
@@ -173,16 +205,31 @@ When there's no code to read, the skill switches to a physical-product mode:
 
 ## ⚙️ Installation
 
-### Claude.ai / Claude desktop app
-1. Download this repo as a ZIP, or zip the `first-clients/` folder.
-2. In Claude's **Settings**, open the **Skills** section and upload the zip.
-3. Make sure the skill is turned on.
-
 ### Claude Code
+macOS / Linux:
 ```bash
 git clone https://github.com/constan100/first-clients.git
+mkdir -p ~/.claude/skills
 cp -r first-clients/first-clients ~/.claude/skills/
 ```
+Windows (PowerShell):
+```powershell
+git clone https://github.com/constan100/first-clients.git
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse first-clients\first-clients "$HOME\.claude\skills\"
+```
+Check it worked: start a new Claude Code session and type `/first-clients`. To use it in one project only, copy the folder into that project's `.claude/skills/` instead.
+
+### Claude.ai / Claude desktop app
+1. Skills need code execution turned on (in Settings, under Capabilities; on Team/Enterprise plans an admin enables it).
+2. Make a zip with the `first-clients/` folder at its top level (the zip must contain `first-clients/SKILL.md`, not a loose `SKILL.md`). GitHub's "Download ZIP" adds an extra parent folder, so don't upload that directly. After cloning (see above):
+   - macOS / Linux: `cd first-clients && zip -r ../first-clients.zip first-clients -x "*/node_modules/*"`
+   - Windows 10/11: `cd first-clients; tar -a -c -f ..\first-clients.zip first-clients` (the built-in `tar` writes the standard paths a zip needs)
+3. Upload the zip in Claude's **Skills** settings (Customize > Skills in recent versions, Settings > Capabilities in older ones).
+4. Make sure the skill is turned on, then ask: *"Help me find my first users for this product."*
+
+### Exports (optional)
+Markdown, CSV and printable HTML work everywhere. Excel, PowerPoint and Word need **Node.js 18+**; the skill installs three small libraries (`docx`, `pptxgenjs`, `exceljs`) into a temporary folder the first time you ask. Direct PDF uses LibreOffice if you have it; otherwise you get a print-ready page to "Save as PDF".
 
 ---
 
@@ -193,6 +240,8 @@ Just ask Claude in plain words:
 > *"Help me find my first clients for this app."*
 > *"Build a marketing strategy for my product. Here's the repo and the live URL."*
 > *"I make handmade leather wallets. How do I start selling them?"*
+> *"Weekly check-in: 6 new stars, 2 replies, I had 3 hours. What now?"*
+> *"Give me the plan as an Excel tracker and a PowerPoint."*
 
 Or call it directly:
 
@@ -206,7 +255,7 @@ Or call it directly:
 - 🖼️ Attach **screenshots or product photos**
 - ⏱️ Be honest about your **hours per week and budget**. The plan depends on it.
 
-### Two modes
+### Two depths for the plan
 
 | ⚡ Quick | 🧠 Full |
 |---|---|
@@ -260,16 +309,27 @@ Yes. Customer-facing content is written in your target market's language, and th
 Yes, and you should. Come back with your numbers each week. It reads the `marketing/` folder and adjusts the plan.
 </details>
 
+<details>
+<summary><b>Can I get the plan in Excel, PowerPoint or Word?</b></summary>
+
+Yes. Ask for any of them (or PDF, Markdown, CSV). The Excel file is a working tracker: tick tasks, log your weekly numbers, see hours planned vs. done. Re-export after each weekly review so it stays up to date.
+</details>
+
 ---
 
 ## 🛣️ Roadmap
 
-- [ ] Dedicated playbook for indie games (wishlists, streamers, festivals)
-- [ ] Weekly review mode with automatic plan adjustments
-- [ ] Email sequence templates for onboarding and retention
-- [ ] More examples and sample outputs
+- [x] Dedicated playbook for indie games (wishlists, streamers, festivals)
+- [x] Weekly review mode with automatic plan adjustments
+- [x] Email sequence templates for onboarding and retention
+- [x] Export to Excel, PowerPoint, Word, PDF, Markdown, CSV
+- [x] A first real example ([`examples/`](examples/))
+- [ ] More examples for SaaS, physical products and games
+- [ ] More languages for exports (English and French today)
 
-Ideas and PRs are welcome. Open an issue!
+## 🧪 Contributing
+
+Changed the skill? Test it first with [`evals/`](evals/): founder profiles for different products, a runner prompt and a 12-point scoring rubric. Ideas and PRs are welcome. Open an issue!
 
 ---
 

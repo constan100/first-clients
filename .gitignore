@@ -1,0 +1,4 @@
+node_modules/
+first-clients/scripts/node_modules/
+# Your own marketing folder may contain personal data about people you contact
+marketing/targets.md

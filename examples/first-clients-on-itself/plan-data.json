@@ -1,0 +1,86 @@
+{
+  "schema": "first-clients/plan@1",
+  "product": "First Clients",
+  "created": "2026-11-26",
+  "language": "en",
+  "founder": { "hours_per_week": 4, "budget": "€0" },
+  "bet": "Solo devs who build with Claude and just shipped need a first-users plan more than a marketing library; a published sample run plus personal outreach to people stuck at zero, then one launch week, gets the first real feedback runs.",
+  "one_liner": "First Clients helps solo developers who build with Claude get their first users in 30 days, without generic growth advice or a marketing budget.",
+  "goal": {
+    "day30": "40 stars and 8 feedback runs by 23 Dec",
+    "floor90": "80 stars and 15 feedback runs",
+    "target90": "300 stars and 30 feedback runs",
+    "north_star": "Feedback runs (people who ran it on their product and said how it went)"
+  },
+  "blockers": [
+    { "blocker": "Public repo is behind the local version (new SKILL.md and references/ not pushed)", "fix": "Commit and push; sync the README", "hours": 0.75, "status": "todo" },
+    { "blocker": "README install command contains a <your-username> placeholder", "fix": "Replace with constan100 and test a fresh install", "hours": 0.5, "status": "todo" },
+    { "blocker": "No proof it works: no sample output anywhere", "fix": "Publish this run (without targets) under examples/ and link it at the top of the README", "hours": 1.5, "status": "todo" },
+    { "blocker": "No way for users to give feedback", "fix": "Add an 'I ran it on my product' issue template and enable Discussions", "hours": 0.5, "status": "todo" }
+  ],
+  "channels": [
+    { "name": "Direct outreach to recent builders stuck at zero", "role": "primary", "score": 20, "why": "Reaches the exact ICP; fits 4h/week; the founder is fine writing messages." },
+    { "name": "X (founder's ~400 dev followers)", "role": "supporting", "score": 20, "why": "Existing audience: amplifies the proof, the launch and the results at almost no cost." },
+    { "name": "Community help on Indie Hackers and r/SideProject", "role": "primary", "score": 18, "why": "Where founders ask how to get users; help first, link only when relevant." },
+    { "name": "Launch week: Show HN + Indie Hackers + r/ClaudeAI", "role": "experiment", "score": 17, "why": "One-time spike; threshold +40 stars and 5 feedback runs in a week." },
+    { "name": "Awesome lists and skill directories", "role": "one-off", "score": 15, "why": "Near-zero effort listings; some lists need 10+ stars first." },
+    { "name": "SEO articles", "role": "dropped", "score": 10, "why": "Too slow for a 30-day goal at 4h/week." }
+  ],
+  "weeks": [
+    {
+      "week": 1, "start": "2026-11-26", "end": "2026-12-02", "theme": "Fix the front door",
+      "actions": [
+        { "id": "1.1", "action": "Push the new SKILL.md and references/; fix the install line; test a fresh install", "channel": "Repo", "hours": 1.25, "output": "Public repo matches local, install works", "done_when": "A clean install triggers the skill", "top3": true, "status": "todo" },
+        { "id": "1.2", "action": "Publish this run (targets removed) under examples/ and link it at the top of the README", "channel": "Repo", "hours": 1.5, "output": "Proof above the fold", "done_when": "README shows 'See a real run' in the first screen", "asset": "assets/front-door.md", "top3": true, "status": "todo" },
+        { "id": "1.3", "action": "Add the 'I ran it' issue template, enable Discussions, set repo description and topics", "channel": "Repo", "hours": 0.75, "output": "Feedback route, findable in GitHub search", "done_when": "'New issue' offers the template", "asset": "assets/feedback-template.md", "top3": true, "status": "todo" },
+        { "id": "1.4", "action": "X post 1: what the skill found when run on itself", "channel": "X", "hours": 0.25, "output": "5–15 profile visits (assumption)", "done_when": "Posted", "asset": "assets/x-posts.md", "status": "todo" },
+        { "id": "1.5", "action": "Fill the baseline row in results.md (incl. GitHub traffic)", "channel": "Metrics", "hours": 0.25, "output": "Baseline", "done_when": "Row complete", "status": "todo" }
+      ]
+    },
+    {
+      "week": 2, "start": "2026-12-03", "end": "2026-12-09", "theme": "First conversations",
+      "actions": [
+        { "id": "2.1", "action": "Send the 5 drafted first messages to targets 1–5", "channel": "Direct outreach", "hours": 1, "output": "1–2 replies (assumption)", "done_when": "5 sent, statuses updated in targets.md", "asset": "assets/outreach.md", "status": "todo" },
+        { "id": "2.2", "action": "Find 10 more targets with the saved searches; draft their messages", "channel": "Direct outreach", "hours": 0.5, "output": "10 new targets", "done_when": "10 rows with a contact route", "status": "todo" },
+        { "id": "2.3", "action": "Submit to awesome lists and skill directories", "channel": "One-off listings", "hours": 1.25, "output": "2–3 listings submitted", "done_when": "Each row marked submitted", "asset": "assets/listings.md", "status": "todo" },
+        { "id": "2.4", "action": "Answer 3 'how do I get first users' posts with real help", "channel": "Community", "hours": 0.75, "output": "Reputation, 0–2 visits", "done_when": "3 replies posted", "status": "todo" },
+        { "id": "2.5", "action": "X post 2 + weekly review", "channel": "X / Metrics", "hours": 0.5, "output": "results.md row", "done_when": "Posted and logged", "status": "todo" }
+      ]
+    },
+    {
+      "week": 3, "start": "2026-12-10", "end": "2026-12-16", "theme": "Launch week",
+      "actions": [
+        { "id": "3.1", "action": "Follow-ups (private routes only) and 5 first messages to new targets", "channel": "Direct outreach", "hours": 1, "output": "1–2 replies", "done_when": "Sent", "status": "todo" },
+        { "id": "3.2", "action": "Update the Show HN text with real feedback numbers", "channel": "Launch prep", "hours": 0.5, "output": "Final posts", "done_when": "launch-posts.md updated", "asset": "assets/launch-posts.md", "status": "todo" },
+        { "id": "3.3", "action": "Tue 15 Dec: post Show HN and answer every comment for 90 min", "channel": "Launch (experiment)", "hours": 1.5, "output": "5–80 points (benchmark range)", "done_when": "Posted, all comments answered", "status": "todo" },
+        { "id": "3.4", "action": "X launch thread + Indie Hackers post; weekly review", "channel": "X / Launch", "hours": 1, "output": "10–25 stars (assumption)", "done_when": "Posted and logged", "status": "todo" }
+      ]
+    },
+    {
+      "week": 4, "start": "2026-12-17", "end": "2026-12-25", "theme": "Follow through (holidays)",
+      "actions": [
+        { "id": "4.1", "action": "r/ClaudeAI post, only if its rules allow it (check first)", "channel": "Launch (experiment)", "hours": 0.5, "output": "", "done_when": "Posted or consciously skipped", "status": "todo" },
+        { "id": "4.2", "action": "Answer every 'I ran it' issue with 3 written suggestions (cap: 3 per week)", "channel": "Feedback", "hours": 1, "output": "3 feedback runs handled", "done_when": "Each issue answered", "status": "todo" },
+        { "id": "4.3", "action": "Last follow-up to non-repliers; X post with honest launch numbers", "channel": "Outreach / X", "hours": 0.5, "output": "", "done_when": "Sent and posted", "status": "todo" },
+        { "id": "4.4", "action": "Wed 23 Dec: day-30 review against the milestone", "channel": "Metrics", "hours": 0.5, "output": "Decision for January", "done_when": "results.md row + chosen rule written", "status": "todo" }
+      ]
+    }
+  ],
+  "if_then": [
+    { "if": "the launch week reaches +40 stars and 5 feedback runs", "then": "in January open awesome-list PRs, pitch a Claude-focused newsletter with the numbers, and keep 10 messages/week" },
+    { "if": "the launch misses but feedback runs reach 8", "then": "drop community replies, raise outreach to 15 messages/week, and turn the best 2 runs (with consent) into examples" },
+    { "if": "fewer than 20 stars or 4 feedback runs on 23 Dec", "then": "plan B, the partner route: offer done-with-you plans to 3 builders with audiences and ask skill collections to list or bundle it" },
+    { "if": "5+ users ask for help applying their plan", "then": "test a paid done-with-you session after day 60" }
+  ],
+  "metrics": [
+    { "name": "Feedback runs", "type": "north_star", "source": "'I ran it' issues, Discussions, DMs", "baseline": 0 },
+    { "name": "Unique repo visitors", "type": "supporting", "source": "GitHub Insights > Traffic (keeps 14 days: log weekly)", "baseline": "" },
+    { "name": "Stars", "type": "supporting", "source": "GitHub repo page", "baseline": 0 },
+    { "name": "Unique cloners", "type": "supporting", "source": "GitHub Insights > Traffic", "baseline": "" }
+  ],
+  "review": { "day": "Wednesday", "minutes": 15 },
+  "sources": [
+    { "title": "Hacker News search: Show HN posts about Claude skills", "url": "https://hn.algolia.com/?q=claude%20skill&type=story" },
+    { "title": "Show HN guidelines", "url": "https://news.ycombinator.com/showhn.html" }
+  ]
+}

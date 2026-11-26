@@ -1,0 +1,64 @@
+{
+  "schema": "first-clients/plan@1",
+  "example_note": "FICTIONAL example showing the format only. Product, numbers and places are made up; never copy its content into a real plan.",
+  "product": "Shiftly",
+  "created": "2027-03-01",
+  "language": "en",
+  "founder": { "hours_per_week": 5, "budget": "€50/month" },
+  "bet": "Independent café owners in your city lose hours every week building staff rotas in spreadsheets; showing them Shiftly in person, café by café, gets your first paying clients faster than any online channel.",
+  "one_liner": "Shiftly helps independent café owners build the staff rota in 10 minutes instead of 2 hours, without spreadsheets or group-chat chaos.",
+  "goal": {
+    "day30": "15 cafés tried it, 3 paying",
+    "floor90": "8 paying cafés",
+    "target90": "20 paying cafés",
+    "north_star": "Paying cafés",
+    "threshold": "Walk-in test: at least 1 in 10 visited cafés starts a trial"
+  },
+  "blockers": [
+    { "blocker": "The homepage doesn't say who it's for", "fix": "New headline: 'Staff rotas for independent cafés, in 10 minutes'", "hours": 0.5, "status": "todo" },
+    { "blocker": "No way to pay after the trial", "fix": "Add a payment link to the trial-end email and the account page", "hours": 1.5, "status": "todo" }
+  ],
+  "channels": [
+    { "name": "In-person visits to cafés in your city", "role": "primary", "score": 21, "why": "Owners are reachable at quiet hours; a 2-minute demo on your phone works; you said you're fine talking face to face." },
+    { "name": "Local café owners' association newsletter", "role": "primary", "score": 18, "why": "Reaches many owners at once; a partner route with a member discount." },
+    { "name": "Instagram posts about rota tips", "role": "dropped", "score": 11, "why": "Slow to build an audience at 5h/week." }
+  ],
+  "weeks": [
+    {
+      "week": 1, "start": "2027-03-01", "end": "2027-03-07", "theme": "Fix the front door",
+      "actions": [
+        { "id": "1.1", "action": "Change the homepage headline and add the payment link", "channel": "Product", "hours": 2, "output": "A visitor understands it and can pay", "done_when": "Both live on the site", "top3": true, "status": "todo" },
+        { "id": "1.2", "action": "Visit 5 cafés between 2 and 4 pm with the 2-minute demo", "channel": "In person", "hours": 2.5, "output": "1–2 trials (assumption)", "done_when": "5 visits logged in targets.md", "asset": "assets/visit-script.md", "top3": true, "status": "todo" },
+        { "id": "1.3", "action": "Email the association to offer a member discount", "channel": "Partner", "hours": 0.5, "output": "A reply or a meeting", "done_when": "Email sent", "asset": "assets/association-email.md", "top3": true, "status": "todo" }
+      ]
+    },
+    {
+      "week": 2, "start": "2027-03-08", "end": "2027-03-14", "theme": "Walk-in test",
+      "actions": [
+        { "id": "2.1", "action": "Visit 8 more cafés", "channel": "In person", "hours": 4, "output": "2–3 trials", "done_when": "8 visits logged", "status": "todo" },
+        { "id": "2.2", "action": "Call every trial user on day 3 to help them build their first rota", "channel": "Onboarding", "hours": 1, "output": "Activated trials", "done_when": "Each trial called", "status": "todo" }
+      ]
+    }
+  ],
+  "checklists": [
+    { "title": "Café visit kit", "items": [
+      { "when": "Before", "item": "Demo account loaded with a sample rota", "status": "todo" },
+      { "when": "Before", "item": "Printed card with the trial link and a QR code", "status": "todo" },
+      { "when": "After", "item": "Log the visit in targets.md the same day", "status": "todo", "value": "" }
+    ] }
+  ],
+  "if_then": [
+    { "if": "fewer than 1 in 10 visits starts a trial after 15 visits", "then": "change the pitch to the no-show feature and test 10 more visits" },
+    { "if": "the association says yes", "then": "shift 2h/week from visits to a member webinar" }
+  ],
+  "metrics": [
+    { "name": "Paying cafés", "type": "north_star", "source": "Payment dashboard", "baseline": 0 },
+    { "name": "Cafés visited", "type": "supporting", "source": "targets.md", "baseline": 0 },
+    { "name": "Trials started", "type": "supporting", "source": "App admin", "baseline": 0 }
+  ],
+  "results": [
+    { "date": "2027-03-07", "values": { "Paying cafés": 0, "Cafés visited": 5, "Trials started": 1 }, "note": "One owner asked for a printed rota option." }
+  ],
+  "review": { "day": "Sunday", "minutes": 15 },
+  "sources": []
+}

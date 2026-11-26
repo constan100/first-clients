@@ -1,0 +1,50 @@
+name: I ran it
+description: Tell me how First Clients worked on your product (good or bad). Takes 2 minutes.
+title: "I ran it: <your product type>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying First Clients. Please don't paste personal data about people you plan to contact (your `targets.md`).
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did you run it?
+      options:
+        - Claude Code
+        - Claude.ai / desktop app
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: Did the install work on the first try?
+      options:
+        - "Yes"
+        - "No (please say where it failed below)"
+    validations:
+      required: true
+  - type: input
+    id: product
+    attributes:
+      label: What kind of product did you run it on?
+      placeholder: e.g. B2B SaaS, CLI tool, Etsy shop, indie game
+  - type: textarea
+    id: useful
+    attributes:
+      label: What was useful, and what was wrong, missing or too long?
+    validations:
+      required: true
+  - type: dropdown
+    id: followed
+    attributes:
+      label: Will you follow the plan's "Do this week" list?
+      options:
+        - "Yes"
+        - Partly
+        - "No"
+  - type: input
+    id: source
+    attributes:
+      label: Where did you hear about First Clients?

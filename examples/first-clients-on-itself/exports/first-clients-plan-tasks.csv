@@ -1,0 +1,19 @@
+﻿Week,Dates,ID,Action,Channel,Hours,Expected output,Done when,Material,Top 3,Status
+1,2026-11-26 → 2026-12-02,1.1,"Push the new SKILL.md and references/; fix the install line; test a fresh install",Repo,1.25,"Public repo matches local, install works",A clean install triggers the skill,,yes,todo
+1,2026-11-26 → 2026-12-02,1.2,Publish this run (targets removed) under examples/ and link it at the top of the README,Repo,1.5,Proof above the fold,README shows 'See a real run' in the first screen,assets/front-door.md,yes,todo
+1,2026-11-26 → 2026-12-02,1.3,"Add the 'I ran it' issue template, enable Discussions, set repo description and topics",Repo,0.75,"Feedback route, findable in GitHub search",'New issue' offers the template,assets/feedback-template.md,yes,todo
+1,2026-11-26 → 2026-12-02,1.4,X post 1: what the skill found when run on itself,X,0.25,5–15 profile visits (assumption),Posted,assets/x-posts.md,,todo
+1,2026-11-26 → 2026-12-02,1.5,Fill the baseline row in results.md (incl. GitHub traffic),Metrics,0.25,Baseline,Row complete,,,todo
+2,2026-12-03 → 2026-12-09,2.1,Send the 5 drafted first messages to targets 1–5,Direct outreach,1,1–2 replies (assumption),"5 sent, statuses updated in targets.md",assets/outreach.md,,todo
+2,2026-12-03 → 2026-12-09,2.2,"Find 10 more targets with the saved searches; draft their messages",Direct outreach,0.5,10 new targets,10 rows with a contact route,,,todo
+2,2026-12-03 → 2026-12-09,2.3,Submit to awesome lists and skill directories,One-off listings,1.25,2–3 listings submitted,Each row marked submitted,assets/listings.md,,todo
+2,2026-12-03 → 2026-12-09,2.4,Answer 3 'how do I get first users' posts with real help,Community,0.75,"Reputation, 0–2 visits",3 replies posted,,,todo
+2,2026-12-03 → 2026-12-09,2.5,X post 2 + weekly review,X / Metrics,0.5,results.md row,Posted and logged,,,todo
+3,2026-12-10 → 2026-12-16,3.1,Follow-ups (private routes only) and 5 first messages to new targets,Direct outreach,1,1–2 replies,Sent,,,todo
+3,2026-12-10 → 2026-12-16,3.2,Update the Show HN text with real feedback numbers,Launch prep,0.5,Final posts,launch-posts.md updated,assets/launch-posts.md,,todo
+3,2026-12-10 → 2026-12-16,3.3,Tue 15 Dec: post Show HN and answer every comment for 90 min,Launch (experiment),1.5,5–80 points (benchmark range),"Posted, all comments answered",,,todo
+3,2026-12-10 → 2026-12-16,3.4,"X launch thread + Indie Hackers post; weekly review",X / Launch,1,10–25 stars (assumption),Posted and logged,,,todo
+4,2026-12-17 → 2026-12-25,4.1,"r/ClaudeAI post, only if its rules allow it (check first)",Launch (experiment),0.5,,Posted or consciously skipped,,,todo
+4,2026-12-17 → 2026-12-25,4.2,Answer every 'I ran it' issue with 3 written suggestions (cap: 3 per week),Feedback,1,3 feedback runs handled,Each issue answered,,,todo
+4,2026-12-17 → 2026-12-25,4.3,"Last follow-up to non-repliers; X post with honest launch numbers",Outreach / X,0.5,,Sent and posted,,,todo
+4,2026-12-17 → 2026-12-25,4.4,Wed 23 Dec: day-30 review against the milestone,Metrics,0.5,Decision for January,results.md row + chosen rule written,,,todo

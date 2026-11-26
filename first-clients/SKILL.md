@@ -1,6 +1,6 @@
 ---
 name: first-clients
-description: Build a 30-day plan to win the first paying clients or first real users for a solo founder's product (SaaS, app, dev tool, open-source project, hardware or physical goods) by studying its code, site and photos, interviewing the founder and researching the market. Use when someone asks how to find clients, users or customers, get traction, market or launch a product, or get their first stars, sales or signups.
+description: Simple one-page 30-day plan to win a solo founder's first clients or users for any product, with weekly reviews, outreach targets, launch kits and Excel/PowerPoint/Word/PDF exports. Use when asked how to find clients or users, get traction, or market, validate or launch a product.
 ---
 
 # First Clients: Solo Founder Growth Strategist
@@ -11,13 +11,37 @@ The guiding principle: **one person, limited hours, a small budget.** Every reco
 
 The most valuable output is usually not the strategy. It is **the 2–5 concrete things blocking the first client** (a broken install, an unclear headline, no way to pay, no proof it works) and **the exact messages to send this week**. Optimize for those.
 
+**Keep it simple for the founder.** They want one clear plan, not a consulting report. The main result is always **`marketing/PLAN.md`**: one page they can read in 2 minutes and follow (see Phase 9). Everything else is backup material behind it. Talk in plain words, explain any marketing term in a few words the first time, and never make the founder read a long file to know what to do today.
+
+---
+
+## Modes: pick one first
+
+Infer the mode from the request; if unclear, offer this menu in one short message. Modes other than Plan load one reference file; read it and follow it instead of the phases below (they reuse the phases where they say so).
+
+| The founder says… | Mode | Read |
+|---|---|---|
+| "help me find clients / users", "market my product" | **Plan** (Full or Quick) | the phases below |
+| "here are my numbers", "weekly review", "what now?" (and `marketing/` exists) | **Review** | `references/review-mode.md` |
+| "find me people to contact", "I ran out of leads" | **Targets** | `references/targets-mode.md` |
+| "I only have an idea", "should I build this?" | **Validate** | `references/validation-mode.md` |
+| "I'm launching on Product Hunt / HN / Kickstarter" | **Launch kit** | `references/launch-kit.md` |
+| "fix the blockers", "apply the landing copy" | **Fix** | `references/fix-mode.md` |
+| "here's what users told me", "sort my feedback" | **Feedback** | `references/feedback-mode.md` |
+| "write my onboarding / welcome emails" | **Emails** | `references/emails.md` |
+| "export the plan to Excel / PowerPoint / Word / PDF" | **Export** | `references/export.md` |
+
+Extra playbooks, read when they apply: `references/physical-products.md` (physical goods) and `references/indie-games.md` (games).
+
+At the end of any mode, offer the export formats in one line (see Phase 9).
+
 ---
 
 ## Phase 0: Setup
 
-1. **Existing context.** Look for a `marketing/` folder at the project root. If it exists, read `results.md` and `plan-30d.md` first, then the rest as needed. This is an **update session**: ask what happened and what the numbers are, compare them to the plan, and adjust. Don't redo the research.
-2. **Mode** (infer it from the request; if unclear, include it in the first interview batch rather than asking separately):
-   - **Quick:** discovery, a short interview, readiness fixes, one-liner, 2 channels, this week's 5 actions with their messages. No deep research. One file: `marketing/quick-plan.md`.
+1. **Existing context.** Look for a `marketing/` folder at the project root. If it exists and the founder brings numbers or asks "what now", switch to **Review** mode. Otherwise read `PLAN.md` and `results.md` first and build on them. Don't redo the research.
+2. **Depth** (infer it from the request; if unclear, include it in the first interview batch rather than asking separately):
+   - **Quick:** discovery, one interview batch, blockers, one-liner, 2 channels (one line of reasoning each; no scoring table, an experiment only if obvious), this week's actions with their messages. Light research: first targets plus one benchmark search for the goal check (otherwise labelled assumptions). Files: `PLAN.md`, `plan-data.json`, `targets.md`, `results.md`, a short `product-profile.md` (blockers + assumptions), and `assets/` only for the messages and copy this week uses.
    - **Full** (default): every phase below.
 3. **Goal type.** Infer which one applies (confirm in the first batch if unsure); it changes Phases 4, 6 and 8:
    - **Revenue:** the first win is a payment (SaaS, paid app, physical goods, services).
@@ -26,7 +50,8 @@ The most valuable output is usually not the strategy. It is **the 2–5 concrete
    - **Digital** (software, apps, SaaS, dev tools, libraries, open-source projects, AI skills/plugins): follow the phases as written.
    - **Physical** (hardware, consumer goods, clothing, cosmetics, handmade, food): follow the phases and also read `references/physical-products.md`, applying its section in each phase.
    - **Hybrid** (connected device + app): both.
-5. **Where files go.** The `marketing/` folder goes at the project root. If the repo is public, ask in the first batch whether to commit it or add it to `.gitignore` (outreach targets and numbers may be private).
+   - **Game** (PC, console, mobile, web games): follow the phases and also read `references/indie-games.md`; for games, "clients" usually means wishlists, then sales.
+5. **Where files go.** The `marketing/` folder goes at the project root. Default: add `marketing/targets.md` to `.gitignore` (personal data); if the repo is public, ask in the first batch whether to commit the rest or ignore the whole folder.
 6. **Language:** customer-facing assets in the target market's language; the strategy in the language the founder writes in. If the founder is bilingual, their second language may be a less crowded market: spend 1–2 searches on it in Phase 3 and score it in Phase 7, or drop it.
 
 ---
@@ -116,7 +141,7 @@ Search tools that tend to work when forums block fetches: Hacker News search (hn
 4. **Search demand:** 10–20 high-intent queries the product can answer ("alternative to X", "how to Y"). Without a keyword tool, label them **hypotheses**, give no volumes, and only include this if SEO could be a channel.
 5. **Amplifiers and partners:** 3–5 named newsletters, curators, podcasts, YouTubers or community roundups that cover this niche, each with how it accepts submissions or pitches, plus 1–2 **partners** who already reach the ICP (a complementary product, a larger collection or bundle, a creator, an agency or association) and what's in it for them. One mention or partner can outweigh weeks of posting.
 6. **First targets:** collect **5–10 real people** (with links) who are asking for exactly what the product does, or have just hit the problem it solves. They become week 1's outreach list, so the founder doesn't start from a blank page. Each target needs:
-   - **ICP fit:** meets the ICP's hard prerequisites (e.g. already uses the platform the product needs, is in the right country, has the budget). A good-sounding post from someone who can't use the product is not a target.
+   - **ICP fit:** meets the ICP's hard prerequisites (e.g. already uses the platform the product needs, is in the right country, has the budget). A good-sounding post from someone who can't use the product is not a target. When the prerequisite is near-universal (almost anyone could use it), use the strongest public **signal** of fit instead (they mention the tool, the stack, the exact situation).
    - **Recency:** posted in the last ~30 days (older only if they're clearly still working on it, e.g. recent commits or posts).
    - **A contact route** the founder can use: DMs, an email or site on their profile, a thread where they asked for help and that still takes replies (Hacker News and Reddit lock old threads), or a GitHub issue/discussion where it's on-topic. Never someone else's launch or Show HN thread as a place to post your own link. No route, no target.
    - What they said, in one line, so the message can reference it.
@@ -193,7 +218,7 @@ If a criterion scores the same for every channel, say so and don't let it decide
 
 Show the table with totals (on a tie, higher ICP fit wins, then founder edge), then commit to:
 - **2 primary channels**: where most of the hours go.
-- **1 experiment**: a time-boxed test with a success threshold decided now. One-time launches (Show HN, Product Hunt, big subreddit posts) are usually the experiment, not primary channels; several can be bundled into one **launch week** with one shared threshold.
+- **1 experiment**: a time-boxed test with a success threshold decided now. One-time launches (Show HN, Product Hunt, big subreddit posts) are usually the experiment, not primary channels; several can be bundled into one **launch week** with one shared threshold (score the bundle as its best member).
 - **The founder's existing audience**, if they have one on any platform (even a few hundred followers): if it scores top 2, it's a primary channel; if not, keep it anyway as a supporting channel that amplifies everything else (proof, launch, results). It costs little and it's their edge.
 - **One-off setup tasks**: near-zero-effort listings that don't need ongoing time (directories, awesome lists, marketplace listings, a profile link). Group them into one block of 2 hours or less; they don't count as channels.
 
@@ -210,14 +235,14 @@ Typical fast channels for solo founders: direct outreach (DM/email) to a tight I
 - Week 1 fixes the top blockers from Phase 4 before any traffic push.
 - Check the calendar: holidays, the founder's own constraints, and platform rhythms (e.g. fewer readers in late December). Move launches out of dead weeks and lower that week's expectations.
 - A **day-30 milestone** that shows whether the 90-day goal is on track (e.g. "day 30: 40 stars and 8 feedback runs; below 20 stars, apply the plan-B rule").
-- Each action: what, channel, time, expected output, done-criteria.
-- Mark the **top 3 actions for this week** (one may group several small rows).
+- Each action: what, channel, time, expected output, done-criteria. This detail lives only in `plan-data.json`; `PLAN.md` shows the short version.
+- Mark the **top 3 actions for this week** (`"top3": true`, at most 3). Other week-1 actions are fine; they go on an "Also this week" line.
 - Days 31–90 as **if/then rules** tied to the experiment threshold and the metrics (e.g. "if the launch brings fewer than 20 signups, then …"), including a **plan B**: the second engine to switch to if the main bet underperforms (often the partner or amplifier route from Phase 3).
 
 ### Assets: only for what the plan uses
 Write an asset only if an action in the 30-day plan uses it. No SEO outlines unless SEO was chosen, no content calendar unless a social channel was chosen.
 - **Front-door copy** (landing page, README top, store or app-store page): headline, subheadline, 3 benefits, proof slot, short FAQ, primary action. Offer to apply it in the codebase; if the founder agrees, make the edit and show the diff, without committing or pushing unless they ask.
-- **Outreach:** a first message plus 2 follow-ups. Short, specific, no hype. Then write the **actual first messages** for 3–5 of the first targets from Phase 3, using what each person posted and suited to their contact route, so week 1 can start immediately. Follow-ups go only through private routes (DM, email); on a public thread, one reply is the whole sequence. Use placeholders only for facts that don't exist yet or that you tried and failed to look up (say which).
+- **Outreach:** a first message plus 2 follow-ups. Short, specific, no hype. Then write the **actual first messages** for 3–5 of the first targets from Phase 3, using what each person posted and suited to their contact route, so week 1 can start immediately. Follow-ups go only through private routes (DM, email), 5–7 days apart; on a public thread, one reply is the whole sequence. For more people later, Targets mode (`references/targets-mode.md`) has search recipes that work for an agent. Use placeholders only for facts that don't exist yet or that you tried and failed to look up (say which).
 - **Launch / community posts:** one per chosen platform, written for its culture and rules (Show HN is plain and technical, Reddit must be genuinely helpful, Product Hunt needs a tagline, first comment and gallery captions).
 - **Social content:** posts for the plan's weeks only, on the one chosen platform.
 - **Listing list:** each one-off destination with its link and how to submit.
@@ -226,31 +251,71 @@ Write an asset only if an action in the 30-day plan uses it. No SEO outlines unl
 - One **north-star metric** plus 3–4 supporting ones that form a funnel (e.g. visitors → signups → activated → paid, or repo views → installs → completed runs → feedback).
 - **Measurement that fits the product:** web apps get analytics events in code, plus a UTM convention for links that land on pages you track; repos and listings use the platform's own stats (GitHub Insights keeps traffic for only 14 days, so log it weekly), registry downloads, or a question in the onboarding/feedback form ("where did you hear about this?").
 - A weekly 15-minute review: update `results.md`, compare to the plan, apply the if/then rules.
+- Metrics and the tracking setup go in `strategy.md` (and the `metrics` list in `plan-data.json`).
 
 ---
 
 ## Phase 9: Deliverables
 
-### Persistent `marketing/` folder
+### The one-page plan: `marketing/PLAN.md` (the main result)
+This is what the founder opens every week. Keep it to about one screen, plain words, no tables wider than 4 columns, written **to** the founder ("you", never "the founder"); the same goes for text in `plan-data.json`, since it ends up in the exports. Exactly this shape:
+
+```markdown
+# Plan for <product> — <start date> to <day 30 date>
+
+**The bet:** one sentence (who, where, why it should work).
+**Goal:** day-30 milestone · 90-day target (floor / ambitious) · north-star metric.
+**Your time:** Xh/week · budget €Y.
+
+## Do this week  (<dates>)
+- [ ] 1. action: how long, where the material is (e.g. `assets/outreach.md`)
+- [ ] 2. …
+- [ ] 3. …
+Also this week: at most 2 short items, with hours (optional; the whole week still fits your hours)
+
+## Weeks 2–4
+- [ ] Week 2 (<dates>): 2–4 checkbox actions, with hours
+- [ ] Week 3 …
+- [ ] Week 4 …
+
+## If… then…
+- If <metric> < <threshold> by <date>, then <plan B>.
+- If <good signal>, then <double down>.
+
+## Every <weekday>, 15 min
+Write your numbers in `results.md`, tick the boxes above, then ask Claude for a weekly review.
+
+Details: strategy.md · targets.md · assets/ · exports/
+```
+
+### Machine-readable plan: `marketing/plan-data.json`
+The full plan as data: every action with its channel, hours, expected output and done-criteria, plus blockers, channels, if/then rules and metrics (schema and a full example in `references/export.md` and `references/plan-data.example.json`). It feeds every export. `PLAN.md` is its one-page summary: when one changes, update the other. There is no third copy of the plan.
+
+### Backup files in `marketing/`
 Each fact lives in **one** file; other files link to it instead of repeating it.
 ```
 marketing/
+  PLAN.md              # the one-page plan (above): the only file the founder must read
+  plan-data.json       # the detailed plan as data (every action, output, done-criteria), for exports
+  exports/             # Excel / PowerPoint / Word / PDF files, when asked
   product-profile.md   # profile (1d shape), features→benefits, readiness, blockers, founder inputs & assumptions
   icp.md               # ICP, alternatives, where they hang out (verified/unverified rules), amplifiers
-  targets.md           # first targets: name/handle, link, what they said, contact route, status (personal data: recommend .gitignore)
+  targets.md           # people to contact, in the table format of references/targets-mode.md (personal data: .gitignore)
   competitors.md       # competitor table, complaint themes, sources
-  strategy.md          # goal check, positioning, pricing/monetization, channel scores, chosen channels
-  plan-30d.md          # the only copy of the dated plan, this week's top 3, days 31–90 rules, metrics
+  strategy.md          # goal check, positioning, pricing/monetization, channel scores, chosen channels, metrics & tracking
   assets/              # only the assets the plan uses
   results.md           # log table: date | actions done | numbers | learnings (append each session)
   unit-economics.md    # physical products only
 ```
 Start `results.md` with a baseline row of today's numbers. Numbers only the founder can see (analytics, revenue, GitHub traffic, store dashboards) go in the interview; if they're missing, leave a clearly marked blank for the founder to fill.
 
-"This week's top 3" lives in `plan-30d.md`; the strategy document and the final reply restate it once, briefly. Nowhere else.
+"This week's top 3" lives in `PLAN.md`; the final reply restates it once, briefly.
 
-### Shareable strategy document
-One clean document (a doc artifact when available, otherwise Markdown or PDF if the founder asks for a file). It must make sense to someone who never opens the folder, so repeating headline numbers is fine, but it **summarizes** in about 1–2 pages; it doesn't copy whole sections:
+### Exports (Excel, PowerPoint, Word, PDF, Markdown, CSV)
+Ask once, near the end, which formats the founder wants (default: none beyond Markdown), then follow `references/export.md`. Typical uses: **Excel** to tick off tasks and log weekly numbers, **PowerPoint** to pitch the plan to a partner or cofounder, **Word/PDF** to print or share the strategy.
+
+### Shareable strategy document (only if the founder wants to share the reasoning)
+Skip it by default: `PLAN.md` plus a Word or PowerPoint export covers most needs. If the founder wants to show the full reasoning to a partner, investor or cofounder, write `marketing/strategy-doc.md` (or a doc artifact when the platform offers one). It must make sense to someone who never opens the folder, so repeating headline numbers is fine, but it **summarizes** in about 1–2 pages; it doesn't copy whole sections:
 1. Executive summary (5 bullets max: the bet, the ICP, the channels, the 30-day goal, this week's actions)
 2. Product, readiness and blockers
 3. Market and competitors
@@ -267,9 +332,10 @@ One clean document (a doc artifact when available, otherwise Markdown or PDF if 
 - Is there any asset no plan action uses? (Delete it.)
 - Does anything ask the founder to do what they said they won't, or claim something about them they didn't say?
 - Is there a second lever (plan B) if the main bet fails?
+- Could the founder follow `PLAN.md` alone, without opening any other file, and does it match `plan-data.json`?
 
 ### Final reply to the founder
-Short: the core bet in one sentence, the top 3 actions this week, the biggest blocker, and where the files are.
+Short and plain: the core bet in one sentence, the top 3 actions this week, the biggest blocker, a link to `PLAN.md`, and one line offering exports ("Want this as an Excel tracker, a PowerPoint or a Word doc?") and the weekly review.
 
 ---
 

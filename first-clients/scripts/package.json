@@ -1,0 +1,16 @@
+{
+  "name": "first-clients-export",
+  "private": true,
+  "description": "Exports marketing/plan-data.json to Excel, PowerPoint, Word, Markdown, HTML, CSV and PDF.",
+  "bin": { "first-clients-export": "export.cjs" },
+  "scripts": {
+    "export": "node export.cjs",
+    "check": "node export.cjs --check"
+  },
+  "dependencies": {
+    "docx": "9.15.3",
+    "exceljs": "4.4.0",
+    "pptxgenjs": "4.0.1"
+  },
+  "engines": { "node": ">=18" }
+}
